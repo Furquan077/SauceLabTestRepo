@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SauceLab_TestAutomation_Suite">
+	<listeners>
+		<listener class-name="com.Reportsgenrated.EXtentRGenrator"/>
+	</listeners>
+  <test thread-count="5" name="SauseLab_Test">
+    <classes>
+      <class name="com.TestCases.pages.LoginPagetest"/>
+      <class name="com.TestCases.pages.ProductPageTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

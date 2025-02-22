@@ -1,49 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-19T08:19:37 IST" name="Default suite" finished-at="2025-02-19T08:20:04 IST" duration-ms="26898">
+  <suite started-at="2025-02-22T19:48:38 IST" name="Default suite" finished-at="2025-02-22T19:48:52 IST" duration-ms="13753">
     <groups>
     </groups>
-    <test started-at="2025-02-19T08:19:37 IST" name="Default test" finished-at="2025-02-19T08:20:04 IST" duration-ms="26898">
-      <class name="com.TestCases.pages.LoginPagetest">
-        <test-method is-config="true" signature="openbrowser()[pri:0, instance:com.TestCases.pages.LoginPagetest@6b09fb41]" started-at="2025-02-19T08:19:37 IST" name="openbrowser" finished-at="2025-02-19T08:19:54 IST" duration-ms="16887" status="PASS">
+    <test started-at="2025-02-22T19:48:38 IST" name="Default test" finished-at="2025-02-22T19:48:52 IST" duration-ms="13753">
+      <class name="com.TestCases.pages.YourKartPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.TestCases.pages.YourKartPageTest@16150369]" started-at="2025-02-22T19:48:38 IST" name="setup" finished-at="2025-02-22T19:48:45 IST" duration-ms="6570" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openbrowser -->
-        <test-method signature="PagetitleTest()[pri:1, instance:com.TestCases.pages.LoginPagetest@6b09fb41]" started-at="2025-02-19T08:19:54 IST" name="PagetitleTest" finished-at="2025-02-19T08:19:55 IST" duration-ms="184" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="verifyPageURLTest()[pri:1, instance:com.TestCases.pages.YourKartPageTest@16150369]" started-at="2025-02-22T19:48:45 IST" name="verifyPageURLTest" finished-at="2025-02-22T19:48:45 IST" duration-ms="97" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PagetitleTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.TestCases.pages.LoginPagetest@6b09fb41]" started-at="2025-02-19T08:19:55 IST" name="teardown" finished-at="2025-02-19T08:19:55 IST" duration-ms="439" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="openbrowser()[pri:0, instance:com.TestCases.pages.LoginPagetest@6b09fb41]" started-at="2025-02-19T08:19:55 IST" name="openbrowser" finished-at="2025-02-19T08:20:00 IST" duration-ms="4830" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openbrowser -->
-        <test-method signature="PageUrlTest()[pri:2, instance:com.TestCases.pages.LoginPagetest@6b09fb41]" started-at="2025-02-19T08:20:00 IST" name="PageUrlTest" finished-at="2025-02-19T08:20:00 IST" duration-ms="20" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PageUrlTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.TestCases.pages.LoginPagetest@6b09fb41]" started-at="2025-02-19T08:20:00 IST" name="teardown" finished-at="2025-02-19T08:20:00 IST" duration-ms="274" status="PASS">
+        </test-method> <!-- verifyPageURLTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.TestCases.pages.YourKartPageTest@16150369]" started-at="2025-02-22T19:48:45 IST" name="teardown" finished-at="2025-02-22T19:48:45 IST" duration-ms="263" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="openbrowser()[pri:0, instance:com.TestCases.pages.LoginPagetest@6b09fb41]" started-at="2025-02-19T08:20:00 IST" name="openbrowser" finished-at="2025-02-19T08:20:03 IST" duration-ms="2985" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.TestCases.pages.YourKartPageTest@16150369]" started-at="2025-02-22T19:48:45 IST" name="setup" finished-at="2025-02-22T19:48:52 IST" duration-ms="6250" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openbrowser -->
-        <test-method signature="LoginTest()[pri:3, instance:com.TestCases.pages.LoginPagetest@6b09fb41]" started-at="2025-02-19T08:20:03 IST" name="LoginTest" finished-at="2025-02-19T08:20:04 IST" duration-ms="660" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="checkouttest()[pri:2, instance:com.TestCases.pages.YourKartPageTest@16150369]" started-at="2025-02-22T19:48:52 IST" name="checkouttest" finished-at="2025-02-22T19:48:52 IST" duration-ms="145" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.TestCases.pages.LoginPagetest@6b09fb41]" started-at="2025-02-19T08:20:04 IST" name="teardown" finished-at="2025-02-19T08:20:04 IST" duration-ms="271" status="PASS">
+        </test-method> <!-- checkouttest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.TestCases.pages.YourKartPageTest@16150369]" started-at="2025-02-22T19:48:52 IST" name="teardown" finished-at="2025-02-22T19:48:52 IST" duration-ms="180" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.TestCases.pages.LoginPagetest -->
+      </class> <!-- com.TestCases.pages.YourKartPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

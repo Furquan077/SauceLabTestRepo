@@ -1,6 +1,6 @@
 package com.TestCases.pages;
 
-import org.openqa.selenium.WebElement;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -14,7 +14,7 @@ public class ProductPageTest extends BasePage{
       
 	LoginPage loginpage;
 	ProductPage productpage;
-	WebElement backpack;
+	
 	
 	public ProductPageTest(){
 		super();

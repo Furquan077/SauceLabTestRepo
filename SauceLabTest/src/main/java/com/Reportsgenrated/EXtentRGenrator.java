@@ -47,12 +47,14 @@ public class EXtentRGenrator extends BasePage implements ITestListener{
 	public void onTestFailure(ITestResult result) {
 		test = extent.createTest(result.getName());
 		test.log(Status.FAIL, result.getName()+"Test Failed");
+		
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		extent.createTest(result.getName());
 		test.log(Status.SKIP, result.getName()+"Test Skipped");
+		
 	}
 
 

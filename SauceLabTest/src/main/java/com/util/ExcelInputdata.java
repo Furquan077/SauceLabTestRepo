@@ -2,33 +2,59 @@ package com.util;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 public class ExcelInputdata {
-	
-	String InputDataSheetpath = "C:\\Users\\ADMIN\\eclipse-workspace\\SauceLabTest\\src\\main\\java\\com\\TestData\\inputdata.xlsx";
 
-	public void getsheetname() {
-try {
-		File file = new File(InputDataSheetpath);
+	@Test(dataProvider = "testdata")
+	public void datatest1(String username , String password) throws IOException {
+		System.out.println(username+ "......."+password);
+	}
+	
+	@DataProvider(name = "testdata")
+	public Object[][]  demo() throws IOException {
+		File file = new File("C:\\Users\\ADMIN\\git\\SauceLabPOMTest\\SauceLabTest\\src\\main\\java\\com\\TestData\\inputdata.xlsx");
 		FileInputStream fis = new FileInputStream(file);
-		Workbook workbook = WorkbookFactory.create(fis);
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		 XSSFSheet sheet = workbook.getSheet("logindata");
+		 
+		 int rowcount = sheet.getLastRowNum();
+		 int colcount = sheet.getRow(0).getLastCellNum();
+		 
+		 Object[][] data = new Object[rowcount][colcount];
+		 
+		 for(int r=0;r<rowcount;r++) {
+			XSSFRow row = sheet.getRow(r+1);
+			for(int c=0;c<colcount;c++) {
+				XSSFCell cell = row.getCell(c);
+				
+				CellType celltype = cell.getCellType();
+				
+				switch(celltype) {
+				case STRING: 
+					data[r][c] = cell.getStringCellValue();
+					break;
+				case NUMERIC:
+					data[r][c]	=Integer.toString((int)cell.getNumericCellValue());
+					break;
+				case BOOLEAN:
+					data[r][c]=cell.getBooleanCellValue();
+				}
+			}
+			
+		 }
+		return data;
 		
-		workbook.getSheet("logindata");
+		 
 		
-	} catch (Throwable e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+		 
 	}
-
-
-
-		
-	}
-	}
-	
+}
